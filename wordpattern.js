@@ -13,6 +13,8 @@ if (pattern.length != arr.length) {
 }
 
 for (let i = 0; i < pattern.length; i++) {
+    //If it doesn't exist in the map AND no other letter in the pattern
+    //is mapped to the word already
     if (!map[pattern[i]] && !Object.values(map).includes(arr[i])) {
         map[pattern[i]] = arr[i]
     } else {
